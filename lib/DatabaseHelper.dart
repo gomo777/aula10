@@ -1,6 +1,6 @@
-import 'package:aula10crud/task_model.dart';
 import 'package:sqflite/sqflite.dart'; // Importando o pacote sqflite para trabalhar com banco de dados SQLite
 import 'package:path/path.dart'; // Importando o pacote path para manipulação de caminhos de arquivos
+import 'package:aula10crud/task_model.dart';
 
 class DatabaseHelper {
   // Definindo a classe DatabaseHelper
@@ -41,7 +41,7 @@ class DatabaseHelper {
     // Método assíncrono para inserir uma tarefa no banco de dados
     final db = await database; // Obtém o banco de dados
     return await db.insert(
-        'tasks', tarefa.toMap()); // Insere a tarefa na tabela 'tasks'
+        'tarefa', tarefa.toMap()); // Insere a tarefa na tabela 'tasks'
   }
 
   Future<List<Tarefa>> fetchTasks() async {
